@@ -1,11 +1,12 @@
-export class Arma {
+export default class Arma {
     //atributos
     private readonly nome: string;
     private readonly descricao: string;
     private dano: number;
 
+    
     //construtor
-    constructor (nome: string, dano: number, descricao: string){
+    constructor(nome: string, dano: number, descricao: string){
         this.nome = nome;
         this.descricao = descricao;
         this.dano = dano;
