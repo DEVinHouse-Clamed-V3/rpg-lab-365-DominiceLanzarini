@@ -63,7 +63,7 @@ export default class Personagem {
 
 
 
-    private calcularDano(): number {
+    protected calcularDano(): number {
         return this.forca + (this.arma ? this.arma.getDano() : 0);
     }
 
