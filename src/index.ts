@@ -1,6 +1,7 @@
 import Arma from "./Arma";
 import Personagem from "./Personagem";
 import Inimigo from "./Inimigo";
+import Chefao from "./Chefao";
 
 //instanciando
 const vassoura = new Arma ("Vassoura", 45, "Vassoura de palha")
@@ -59,3 +60,34 @@ console.log(`${traficante.getNome()} está com ${traficante.getVida()} de vida`)
 console.log(`${bebadoDaRua.getNome()} está com ${bebadoDaRua.getVida()} de vida`) 
 
 console.log(`Falta apenas ${heroi.getNome()} lutar contra seu pseudo aliado ${traficante.getNome()} mas...`)
+
+const chefao = new Chefao ("Mãe do Juninho", 100, 30)
+
+console.log(`Nosso herói ${heroi.getNome()} saiu de casa sem pedir pra mãe, e agora ela está furiosa feito um cabrito...`)
+
+chefao.equiparArma(havaianaDePau)
+chefao.atacar(traficante)
+
+console.log(`${heroi.getNome()} está com ${heroi.getVida()} de vida`)
+console.log(`${traficante.getNome()} está com ${traficante.getVida()} de vida`) 
+console.log(`${bebadoDaRua.getNome()} está com ${bebadoDaRua.getVida()} de vida`) 
+
+console.log(`A ${chefao.getNome()} está furiosa, compra um Derby pra si mesma e uma garrafa de pinga, chega em casa e...`)
+
+console.log(`${heroi.getNome()} tu nunca mais me saia de casa! E tome essa!`)
+
+chefao.equiparArma(havaianaDePau)
+chefao.atacar(heroi)
+chefao.atacar(heroi)
+
+console.log(`${heroi.getNome()} está com ${heroi.getVida()} de vida`)
+
+chefao.atacar(heroi)
+console.log(`${heroi.getNome()} está com ${heroi.getVida()} de vida`)
+
+
+if(heroi.getVida() <= 0) {
+    console.log(`Hahahaaha nosso herói foi derrotado! Avaiana de pau! Eu amo avaiana de pau! Puquê?? Ensina as quiança! Bate nas quiança! As quiança apende na marra! Ohhh! Avaiana de pau! Se não apende morre! Ohh`)
+} else {
+    console.log(`Não sabemos como, mas nosso herói ainda está vivo ahhaahh`)
+}
